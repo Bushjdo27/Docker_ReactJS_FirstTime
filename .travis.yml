@@ -8,3 +8,16 @@ before_install:
 
 script:
   - docker run bushjdo/docker_reactjs_firsttime npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  app: "Docker_ReactJS"
+  env: "DockerReactjs-env"
+  region: "us-west-2"
+  bucket_name: "elasticbeanstalk-us-west-2-153280271500"
+  bucket_path: "Docker_ReactJS"
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+  on:
+    branch: master
