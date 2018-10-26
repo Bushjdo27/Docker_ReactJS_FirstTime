@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React with Bushjdo
+            Learn React with Bushjdo , using Docker
           </a>
         </header>
       </div>
